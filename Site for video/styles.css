@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(leaf_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{
+    position: relative;
+    left: 10px;
+    font-size: 2em;
+    color: aliceblue;
+    user-select: none;
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 60px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: aliceblue;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+.VideoFrame{
+    margin-top: 100px;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 70vh;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 250px;
+    overflow-y: auto;
+}
+.VideoFrame video {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    max-height: 55vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
